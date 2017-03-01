@@ -5,9 +5,28 @@
 paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 
 ### Usage
+<!--
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="paper-weather.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
 ```html
-<paper-dialog-lite opened>
-  Dialog body
+<style>
+  paper-dialog-lite{
+    color: white;
+    background: green;
+    padding: 20px;
+  }
+</style>
+
+<paper-dialog-lite with-backdrop opened>
+  Dialog Body
 </paper-dialog-lite>
 ```
 
