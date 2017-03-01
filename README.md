@@ -21,6 +21,9 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
         "Ubuntu", "Cantarell", "Fira Sans",
         "Droid Sans", "Helvetica Neue", sans-serif;
         font-size: 16px;
+        background: white;
+        color: green;
+        padding: 30px;
       }
     </style>
     <div class="container">
@@ -31,13 +34,6 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 ```
 -->
 ```html
-<style>
-  paper-dialog-lite{
-    background: green;
-    padding: 30px;
-  }
-</style>
-
 <paper-dialog-lite with-backdrop opened>
   paper-dialog-lite
 </paper-dialog-lite>
