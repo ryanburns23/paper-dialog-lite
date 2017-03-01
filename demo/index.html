@@ -39,6 +39,7 @@
 
       </template>
       <script>
+      document.addEventListener('WebComponentsReady', function() {
         Polymer({
           is: 'demo-element',
 
@@ -46,6 +47,7 @@
             this.opened = "true";
           },
         });
+      });
       </script>
     </dom-module>
 
