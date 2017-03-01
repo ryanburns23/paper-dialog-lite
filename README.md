@@ -11,7 +11,14 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="paper-dialog-lite.html">
-    <next-code-block></next-code-block>
+    <style>
+      container{
+        height: 500px;
+      }
+    </style>
+    <div class="container">
+      <next-code-block></next-code-block>
+    </div>
   </template>
 </custom-element-demo>
 ```
@@ -19,8 +26,7 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 ```html
 <style>
   paper-dialog-lite{
-    color: white;
-    background: green;
+    background: white;
     padding: 20px;
   }
 </style>
