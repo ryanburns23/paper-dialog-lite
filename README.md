@@ -7,11 +7,11 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 ### Usage
 <!--
 ```
-<custom-element-demo>
+<custom-element-demo height="500px">
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="paper-dialog-lite.html">
-    <next-code-block height="500px"></next-code-block>
+    <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
