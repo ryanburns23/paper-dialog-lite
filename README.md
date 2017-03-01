@@ -6,7 +6,9 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 
 ### Usage
 ```html
-<paper-dialog-lite opened>Dialog body</paper-dialog-lite>
+<paper-dialog-lite opened>
+  Dialog body
+</paper-dialog-lite>
 ```
 
 ### Animations
@@ -21,9 +23,7 @@ For example:
 <link rel="import" href="components/neon-animation/animations/scale-up-animation.html">
 <link rel="import" href="components/neon-animation/animations/fade-out-animation.html">
 
-<paper-dialog-lite entry-animation="scale-up-animation"
-              exit-animation="fade-out-animation">
-  <h2>Header</h2>
-  <div>Dialog body</div>
+<paper-dialog-lite entry-animation="scale-up-animation" exit-animation="fade-out-animation">
+  Dialog body
 </paper-dialog-lite>
 ```
