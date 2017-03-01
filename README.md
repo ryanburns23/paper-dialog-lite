@@ -12,8 +12,15 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="paper-dialog-lite.html">
     <style>
-      container{
-        height: 500px;
+      .container{
+        height: 400px;
+      }
+      paper-dialog-lite{
+        font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 16px;
       }
     </style>
     <div class="container">
@@ -26,13 +33,13 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 ```html
 <style>
   paper-dialog-lite{
-    background: white;
-    padding: 20px;
+    background: green;
+    padding: 30px;
   }
 </style>
 
 <paper-dialog-lite with-backdrop opened>
-  Dialog Body
+  paper-dialog-lite
 </paper-dialog-lite>
 ```
 
