@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>paper-dialog-lite demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../paper-button/paper-button.html">
+    <link rel="import" href="../paper-dialog-lite.html">
+
+  </head>
+  <body>
+
+    <dom-module id="demo-element">
+      <template>
+        <style>
+          :host {
+            display: block;
+            font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen",
+            "Ubuntu", "Cantarell", "Fira Sans",
+            "Droid Sans", "Helvetica Neue", sans-serif;
+          }
+          paper-dialog-lite{
+            background: white;
+            padding: 40px;
+          }
+          paper-button{
+            color: green;
+          }
+        </style>
+
+        <paper-dialog-lite with-backdrop  opened="{{opened}}">paper-dialog-lite</paper-dialog-lite>
+        <paper-button on-tap="open" raised>Open Dialog</paper-button>
+
+
+      </template>
+      <script>
+        Polymer({
+          is: 'demo-element',
+
+          open: function(){
+            this.opened = "true";
+          },
+        });
+      </script>
+    </dom-module>
+
+    <demo-element></demo-element>
+
+  </body>
+</html>

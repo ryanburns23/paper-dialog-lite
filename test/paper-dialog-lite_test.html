@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>paper-dialog-lite test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../paper-dialog-lite.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <paper-dialog-lite></paper-dialog-lite>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('paper-dialog-lite', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'paper-dialog-lite');
+        });
+      });
+    </script>
+  </body>
+</html>

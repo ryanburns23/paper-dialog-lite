@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../neon-animation/neon-animation-runner-behavior.html">
+<link rel="import" href="../iron-overlay-behavior/iron-overlay-behavior.html">
+
+<!--
+`paper-dialog-lite`
+is a paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
+
+Material design: [Dialogs](https://www.google.com/design/spec/components/dialogs.html)
+
+### Animations
+Set the `entry-animation` and/or `exit-animation` attributes to add an animation when the dialog
+is opened or closed. See the documentation in
+[PolymerElements/neon-animation](https://github.com/PolymerElements/neon-animation) for more info.
+
+@demo demo/index.html
+-->
+
+<dom-module id="paper-dialog-lite">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: 'paper-dialog-lite',
+
+      behaviors: [Polymer.IronOverlayBehavior, Polymer.NeonAnimationRunnerBehavior],
+
+      listeners: {
+        'neon-animation-finish': '_onNeonAnimationFinish'
+      },
+      _renderOpened: function() {
+        this.cancelAnimation();
+        this.playAnimation('entry');
+      },
+      _renderClosed: function() {
+        this.cancelAnimation();
+        this.playAnimation('exit');
+      },
+      _onNeonAnimationFinish: function() {
+        if (this.opened) {
+          this._finishRenderOpened();
+        } else {
+          this._finishRenderClosed();
+        }
+      }
+    });
+  </script>
+</dom-module>
