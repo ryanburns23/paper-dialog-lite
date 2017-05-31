@@ -20,6 +20,7 @@ Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
         height: 500px;
       }
       paper-dialog-lite{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         background: white;
         @apply --layout-horizontal;
         @apply --layout-center-center;
@@ -28,9 +29,10 @@ Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
         box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.14),
         0 4px 22px 3px rgba(0, 0, 0, 0.12),
         0 6px 7px -4px rgba(0, 0, 0, 0.4);
-        height: calc(100vh - 70px);
-        width: calc(100vw - 70px);
-        font-size: 18px;
+        height: calc(100vh - 80px);
+        width: calc(100vw - 80px);
+        font-size: 20px;
+        text-align: center;
       }
     </style>
     <div class="container">
@@ -41,8 +43,8 @@ Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
 ```
 -->
 ```html
-<paper-dialog-lite with-backdrop opened>
-  👋 &nbsp; Check out the <a href="https://www.webcomponents.org/element/ryanburns23/paper-dialog-lite/demo/demo/index.html">demo</a> for an animation example
+<paper-dialog-lite opened with-backdrop>
+  👋 &nbsp; Check out the demo for an animation example
 </paper-dialog-lite>
 ```
 
