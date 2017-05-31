@@ -6,9 +6,16 @@
 
     <title>paper-dialog-lite demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-
+    <!-- Demo Dependencies -->
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+    <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
     <link rel="import" href="../../paper-button/paper-button.html">
+    <!-- Ensure Web Animations polyfill is loaded since neon-animation 2.0 doesn't import it -->
+    <link rel="import" href="../../neon-animation/web-animations.html">
+    <link rel="import" href="../../neon-animation/animations/scale-up-animation.html">
+    <link rel="import" href="../../neon-animation/animations/fade-out-animation.html">
+
+    <!-- import paper-dialog-lite -->
     <link rel="import" href="../paper-dialog-lite.html">
 
   </head>
@@ -19,32 +26,74 @@
         <style>
           :host {
             display: block;
-            font-family: -apple-system, BlinkMacSystemFont,
-            "Segoe UI", "Roboto", "Oxygen",
-            "Ubuntu", "Cantarell", "Fira Sans",
-            "Droid Sans", "Helvetica Neue", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            @apply --layout-fit;
+            @apply --layout-horizontal;
+            @apply --layout-center-center;
           }
           paper-dialog-lite{
             background: white;
+            @apply --layout-horizontal;
+            @apply --layout-center-center;
+            color: #2196F3;
             padding: 40px;
+            box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.14),
+            0 4px 22px 3px rgba(0, 0, 0, 0.12),
+            0 6px 7px -4px rgba(0, 0, 0, 0.4);
+            height: calc(100vh - 100px);
+            width: calc(100vw - 100px);
+            font-size: 25px;
           }
           paper-button{
-            color: green;
+            color: white;
+            background: #2196F3;
+          }
+
+          .close {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: -16px;
+            top: -16px;
+            background: white;
+            border-radius: 50%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 20;
+            color: #000;
+            background: white;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+          }
+          .close:hover{
+            color: #2196F3;
           }
         </style>
 
-        <paper-dialog-lite with-backdrop  opened="{{opened}}">paper-dialog-lite</paper-dialog-lite>
-        <paper-button on-tap="open" raised>Open Dialog</paper-button>
-
+        <paper-dialog-lite
+          entry-animation="scale-up-animation"
+          exit-animation="fade-out-animation"
+          with-backdrop
+          opened="{{opened}}">
+            <div class="close" on-tap="_close" icon="close">✕</div>
+            👋 &nbsp; paper-dialog-lite
+          </paper-dialog-lite>
+        <paper-button on-tap="_open" raised>Open Dialog</paper-button>
 
       </template>
       <script>
       document.addEventListener('WebComponentsReady', function() {
         Polymer({
           is: 'demo-element',
-
-          open: function(){
-            this.opened = "true";
+          _open: function(){
+            this.opened = true;
+          },
+          _close: function(){
+            this.opened = false;
           },
         });
       });

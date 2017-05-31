@@ -3,14 +3,16 @@
   "description": "paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles",
   "main": "paper-dialog-lite.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
-    "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#^1.10.3",
-    "neon-animation": "PolymerElements/neon-animation#^1.2.4"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#^2.0.0",
+    "neon-animation": "PolymerElements/neon-animation#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "paper-button": "PolymerElements/paper-button",
-    "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "web-animations-js": "web-animations/web-animations-js#^2.2.5",
+    "paper-button": "PolymerElements/paper-button#^2.0.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.0",
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }

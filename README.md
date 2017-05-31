@@ -2,7 +2,10 @@
 
 # \<paper-dialog-lite\>
 
-paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
+Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
+
+- Version 2x uses ES6 & extends Polymer.Element - Use 1x for Polymer 1 support
+- No styles are included
 
 ### Usage
 <!--
@@ -10,20 +13,24 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 <custom-element-demo height="500px">
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
     <link rel="import" href="paper-dialog-lite.html">
     <style>
       .container{
-        height: 400px;
+        height: 500px;
       }
       paper-dialog-lite{
-        font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
-        font-size: 16px;
         background: white;
-        color: green;
-        padding: 30px;
+        @apply --layout-horizontal;
+        @apply --layout-center-center;
+        color: #2196F3;
+        padding: 40px;
+        box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.14),
+        0 4px 22px 3px rgba(0, 0, 0, 0.12),
+        0 6px 7px -4px rgba(0, 0, 0, 0.4);
+        height: calc(100vh - 70px);
+        width: calc(100vw - 70px);
+        font-size: 18px;
       }
     </style>
     <div class="container">
@@ -35,7 +42,7 @@ paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
 -->
 ```html
 <paper-dialog-lite with-backdrop opened>
-  paper-dialog-lite
+  👋 &nbsp; Check out the <a href="https://www.webcomponents.org/element/ryanburns23/paper-dialog-lite/demo/demo/index.html">demo</a> for an animation example
 </paper-dialog-lite>
 ```
 
