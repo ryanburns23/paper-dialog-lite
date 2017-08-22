@@ -1,11 +1,7 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/ryanburns23/paper-dialog-lite)
 
 # \<paper-dialog-lite\>
-
-Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
-
-- Version 2x uses ES6 & extends Polymer.Element - Use 1x for Polymer 1 support
-- No styles are included
+Polymer element that extends IronOverlayBehavior
 
 ### Usage
 <!--
@@ -45,22 +41,5 @@ Polymer element that extends IronOverlayBehavior & NeonAnimationRunnerBehavior
 ```html
 <paper-dialog-lite opened with-backdrop>
   👋 &nbsp; Check out the demo for an animation example
-</paper-dialog-lite>
-```
-
-### Animations
-
-Set the `entry-animation` and/or `exit-animation` attributes to add an animation when the dialog
-is opened or closed. See the documentation in
-[PolymerElements/neon-animation](https://github.com/PolymerElements/neon-animation) for more info.
-
-For example:
-
-```html
-<link rel="import" href="components/neon-animation/animations/scale-up-animation.html">
-<link rel="import" href="components/neon-animation/animations/fade-out-animation.html">
-
-<paper-dialog-lite entry-animation="scale-up-animation" exit-animation="fade-out-animation">
-  Dialog body
 </paper-dialog-lite>
 ```
