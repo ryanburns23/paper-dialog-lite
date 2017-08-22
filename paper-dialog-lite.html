@@ -1,56 +1,14 @@
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../neon-animation/neon-animation-runner-behavior.html">
+<link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../iron-overlay-behavior/iron-overlay-behavior.html">
 
 <!--
 `paper-dialog-lite`
-is a paper-dialog without paper-dialog-behavior or paper-dialog-shared-styles
+is a dialog without paper-dialog-behavior, paper-dialog-shared-styles, or neon-animation-runner-behavior
 
 - Version 2x uses ES6 & extends Polymer.Element - Use 1x for Polymer 1 support
 - No styles are included
 
-Material design: [Dialogs](https://www.google.com/design/spec/components/dialogs.html)
-
-### Animations
-Set the `entry-animation` and/or `exit-animation` attributes to add an animation when the dialog
-is opened or closed. See the documentation in
-[PolymerElements/neon-animation](https://github.com/PolymerElements/neon-animation) for more info.
-
 @demo demo/index.html
 -->
 
-<dom-module id="paper-dialog-lite">
-  <template>
-    <slot></slot>
-  </template>
-  <script>
-    class PaperDialogLite extends Polymer.mixinBehaviors([Polymer.IronOverlayBehavior, Polymer.NeonAnimationRunnerBehavior], Polymer.Element) {
-
-      static get is() { return 'paper-dialog-lite'; }
-
-      ready() {
-        super.ready();
-        this.addEventListener('neon-animation-finish', e => this._onNeonAnimationFinish(e));
-      }
-
-      _renderOpened() {
-        this.cancelAnimation();
-        this.playAnimation('entry');
-      }
-
-      _renderClosed() {
-        this.cancelAnimation();
-        this.playAnimation('exit');
-      }
-      
-      _onNeonAnimationFinish() {
-        if (this.opened) {
-          this._finishRenderOpened();
-        } else {
-          this._finishRenderClosed();
-        }
-      }
-    }
-    customElements.define(PaperDialogLite.is, PaperDialogLite);
-  </script>
-</dom-module>
+<script src="paper-dialog-lite.js"></script>
